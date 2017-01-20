@@ -22,6 +22,10 @@ public class BaseMvpPresenter<V extends MvpView> implements MvpPresenter<V> {
         return mMvpView != null;
     }
 
+    public V getMvpView() {
+        return mMvpView;
+    }
+
     public void checkViewAttached() {
         if (!isViewAttached()) throw new MvpViewNotAttachException();
     }
